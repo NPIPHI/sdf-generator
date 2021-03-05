@@ -3,9 +3,9 @@ project(ecs)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(ecs src/main.cpp src/gfx/init.cpp src/gfx/init.hpp src/gfx/shader.cpp src/gfx/shader.hpp src/io/io.cpp src/io/io.hpp src/mainLoop.h src/game/game.cpp src/game/game.h src/game/entity.cpp src/game/entity.h src/gfx/bufferObject.h src/gfx/texture.cpp src/gfx/texture.hpp src/sdf/sdf.cpp src/sdf/sdf.h)
+add_executable(ecs src/main.cpp src/gfx/init.cpp src/gfx/init.hpp src/gfx/shader.cpp src/gfx/shader.hpp src/io/io.cpp src/io/io.hpp src/mainLoop.h src/game/App.cpp src/game/App.h src/gfx/bufferObject.h src/gfx/texture.cpp src/gfx/texture.hpp src/sdf/sdf.cpp src/sdf/sdf.h)
 
-add_subdirectory(glm)
+find_package(glm REQUIRED)
 
 target_link_libraries(ecs glm)
 
@@ -21,9 +21,9 @@ if(EMSCRIPTEN)
             )
 
 else()
-    find_package(openGL REQUIRED)
+    find_package(OpenGL REQUIRED)
     find_package(glfw3 REQUIRED)
-    find_package(glew REQUIRED)
+    find_package(GLEW REQUIRED)
 
     target_link_libraries(ecs
             ${OPENGL_LIBRARY}

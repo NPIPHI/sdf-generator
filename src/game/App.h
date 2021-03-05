@@ -3,19 +3,15 @@
 #include <glm/glm.hpp>
 #include <vector>
 #include <GL/glew.h>
-#include "entity.h"
 
-class game {
+class App {
 public:
-    game();
-    game(game &) = delete;
-    game(game &&) = delete;
+    App();
+    App(App &) = delete;
+    App(App &&) = delete;
     void render();
-    void update();
-    void click(float x, float y);
 
 private:
-    std::vector<entity> entites;
     struct {
         GLuint blitProgram;
         GLuint rastorTexture;

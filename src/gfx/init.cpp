@@ -3,7 +3,6 @@
 //
 
 #include "init.hpp"
-#include<emscripten/html5.h>
 
 GLFWwindow *makeWindow(int width, int height) {
     glfwInit();

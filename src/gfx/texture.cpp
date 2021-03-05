@@ -3,6 +3,7 @@
 //
 
 #include "texture.hpp"
+#include "../io/io.hpp"
 
 GLuint get_BMP(const std::string &file_name) {
     auto buffer = getFileRaw(file_name);

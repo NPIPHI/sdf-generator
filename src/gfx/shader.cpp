@@ -6,7 +6,7 @@
 #include <vector>
 #include <cstdio>
 #include <unordered_map>
-#include <src/io/io.hpp>
+#include "../../src/io/io.hpp"
 
 std::unordered_map<std::string, GLuint> shaderCache;
 

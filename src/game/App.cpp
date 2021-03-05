@@ -2,14 +2,14 @@
 // Created by 16182 on 7/17/2020.
 //
 
-#include <src/gfx/texture.hpp>
-#include <src/gfx/bufferObject.h>
-#include "game.h"
-#include <src/gfx/shader.hpp>
-#include <src/sdf/sdf.h>
+#include "../gfx/texture.hpp"
+#include "../gfx/bufferObject.h"
+#include "App.h"
+#include "../gfx/shader.hpp"
+#include "../sdf/sdf.h"
 
 
-void game::render() {
+void App::render() {
     bufferObject<glm::vec2, glm::vec2> buf;
     buf.push_back<0>(glm::vec2{-1, -1});
     buf.push_back<0>(glm::vec2{-1, 3});
@@ -31,12 +31,7 @@ void game::render() {
     glDrawArrays(GL_TRIANGLES, 0, 3);
 }
 
-void game::update() {
-//    flushProgram("GenSDF");
-//    shader.outlineProgram = getProgram("GenSDF");
-}
-
-game::game() {
+App::App() {
     shader.blitProgram = getProgram("Blit");
     shader.rastorTexture = get_BMP("../res/font.bmp");
     shader.sdfTexture = gen_SDF(shader.rastorTexture, 0, 1024, 1024);
@@ -55,10 +50,4 @@ game::game() {
     glBindBuffer(GL_ARRAY_BUFFER, shader.uvArray);
     glEnableVertexAttribArray(uvLocator);
     glVertexAttribPointer(uvLocator, 2, GL_FLOAT, GL_FALSE, 0, 0);
-}
-
-void game::click(float x, float y) {
-    for(auto & ent : entites){
-        ent.moveTo(glm::vec2{x, y});
-    }
 }

@@ -2,10 +2,10 @@
 // Created by 16182 on 7/17/2020.
 //
 
-#include <src/gfx/texture.hpp>
-#include <src/gfx/bufferObject.h>
+#include "../gfx/texture.hpp"
+#include "../gfx/bufferObject.h"
 #include "sdf.h"
-#include <src/gfx/shader.hpp>
+#include "../gfx/shader.hpp"
 #include <glm/glm.hpp>
 
 bool initilized = false;
