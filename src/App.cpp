@@ -7,6 +7,7 @@
 #include "App.hpp"
 #include "gfx/shader.hpp"
 #include "sdf/sdf.h"
+#include <glm/glm.hpp>
 
 
 void App::render() {
