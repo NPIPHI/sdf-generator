@@ -6,10 +6,7 @@
 
 
 GLFWwindow * window;
-struct {
-    double width;
-    double height;
-} windowInfo;
+
 std::unique_ptr<App> app;
 
 void mainLoop() {
@@ -26,9 +23,6 @@ void mainLoop() {
 
 int main() {
     window = makeWindow(1024, 1024);
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    windowInfo.width = 1024;
-    windowInfo.height = 1024;
     app = std::make_unique<App>();
     setMainLoop(mainLoop, window);
 }
