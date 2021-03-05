@@ -2,11 +2,11 @@
 // Created by 16182 on 7/17/2020.
 //
 
-#include "../gfx/texture.hpp"
-#include "../gfx/bufferObject.h"
-#include "App.h"
-#include "../gfx/shader.hpp"
-#include "../sdf/sdf.h"
+#include "gfx/texture.hpp"
+#include "gfx/bufferObject.h"
+#include "App.hpp"
+#include "gfx/shader.hpp"
+#include "sdf/sdf.h"
 
 
 void App::render() {

@@ -2,7 +2,7 @@
 #include <memory>
 #include "gfx/init.hpp"
 #include "mainLoop.h"
-#include "game/App.h"
+#include "App.hpp"
 
 
 GLFWwindow * window;

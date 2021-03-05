@@ -3,7 +3,7 @@ project(ecs)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(ecs src/main.cpp src/gfx/init.cpp src/gfx/init.hpp src/gfx/shader.cpp src/gfx/shader.hpp src/io/io.cpp src/io/io.hpp src/mainLoop.h src/game/App.cpp src/game/App.h src/gfx/bufferObject.h src/gfx/texture.cpp src/gfx/texture.hpp src/sdf/sdf.cpp src/sdf/sdf.h)
+add_executable(ecs src/main.cpp src/gfx/init.cpp src/gfx/init.hpp src/gfx/shader.cpp src/gfx/shader.hpp src/io/io.cpp src/io/io.hpp src/mainLoop.h src/App.cpp src/App.hpp src/gfx/bufferObject.h src/gfx/texture.cpp src/gfx/texture.hpp src/sdf/sdf.cpp src/sdf/sdf.h)
 
 find_package(glm REQUIRED)
 
