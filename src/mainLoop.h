@@ -14,6 +14,9 @@ void exitMainLoop(){
 }
 
 #else
+
+#include<thread>
+
 bool inLoop = false;
 void setMainLoop(callback_function callback, GLFWwindow * window) {
     inLoop = true;
@@ -21,6 +24,7 @@ void setMainLoop(callback_function callback, GLFWwindow * window) {
     while (inLoop){
         callback();
         glfwSwapBuffers(window);
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 }
 
